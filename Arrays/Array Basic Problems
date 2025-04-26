@@ -1,0 +1,106 @@
+# Array Problems - Basics
+
+# Problem 1: Reverse an Array
+def reverse_array(arr):
+    start, end = 0, len(arr) - 1
+    while start < end:
+        arr[start], arr[end] = arr[end], arr[start]
+        start += 1
+        end -= 1
+    return arr
+
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+
+# Problem 2: Find Second Largest Number
+def second_largest(arr):
+    first = second = float('-inf')
+    for num in arr:
+        if num > first:
+            second = first
+            first = num
+        elif num > second and num != first:
+            second = num
+    return second
+
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+
+# Problem 3: Find Duplicates in Array
+def find_duplicates(arr):
+    seen = set()
+    duplicates = set()
+    for num in arr:
+        if num in seen:
+            duplicates.add(num)
+        else:
+            seen.add(num)
+    return list(duplicates)
+
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+
+# Problem 4: Check if Array is Palindrome
+def palindrome(arr, L, R):
+    while L < R:
+        if arr[L] != arr[R]:
+            return False
+        L += 1
+        R -= 1
+    return True
+
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+
+# Problem 5: Find Maximum Element
+def find_max(arr):
+    maximum = arr[0]
+    for num in arr:
+        if num > maximum:
+            maximum = num
+    return maximum
+
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+
+# Problem 6: Sum of All Elements
+def sum_of_elements(arr):
+    total = 0
+    for num in arr:
+        total += num
+    return total
+
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+
+# Problem 7: Count Even and Odd Numbers
+def count_even_odd(arr):
+    even = odd = 0
+    for num in arr:
+        if num % 2 == 0:
+            even += 1
+        else:
+            odd += 1
+    return even, odd
+
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+
+# Problem 8: Check if Array is Sorted
+def is_sorted(arr):
+    for i in range(len(arr) - 1):
+        if arr[i] > arr[i + 1]:
+            return False
+    return True
+
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+
+# Problem 9: Find Missing Number in Array
+# Array of n-1 elements from 1 to n
+def missing_number(arr, n):
+    total = n * (n + 1) // 2
+    return total - sum(arr)
+
+# Time Complexity: O(n)
+# Space Complexity: O(1)

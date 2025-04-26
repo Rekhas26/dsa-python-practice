@@ -1,0 +1,50 @@
+"""
+Problem:
+Find the second largest number in a list.
+
+Example:
+Input: [5, 2, 9, 1, 5, 6]
+Output: 6
+
+Approach:
+- Initialize two variables: first (largest) and second (second largest).
+- Loop through each number:
+    - If the number is greater than first:
+        - Update second to first.
+        - Update first to current number.
+    - Else if the number is greater than second and not equal to first:
+        - Update second to current number.
+- At the end, second will have the second largest number.
+
+Time Complexity:
+O(n), single pass through the list.
+
+Space Complexity:
+O(1), no extra space except variables.
+"""
+
+# Code starts here
+
+nums = [5, 2, 9, 1, 5, 6]
+first = second = float('-inf')
+
+# nums = [5, 2, 9, 1, 5, 6]
+for num in nums:
+    if num > first:
+        second = first
+        first = num
+    elif num > second and num != first:
+        second = num
+
+print("Second largest number is:", second)
+
+
+"""sorted_list = sorted(nums,reverse=True)
+print(sorted_list[1])
+
+
+time complexity - O(nLog n)"""
+
+
+
+# Code ends here

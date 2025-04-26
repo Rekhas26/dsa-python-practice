@@ -1,4 +1,6 @@
-An array is one of the simplest and most widely used data structures in programming. It represents a collection of elements stored in a contiguous memory location. Each element in the array is of the same data type, and the array can be accessed via indices.
+An array is one of the simplest and most widely used data structures in programming.
+It represents a collection of elements stored in a contiguous memory location.
+Each element in the array is of the same data type, and the array can be accessed via indices.
 
 Key Characteristics of Arrays:
 Fixed Size:

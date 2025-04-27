@@ -1,0 +1,29 @@
+def max_product(arr):
+    if len(arr) < 2:
+        return None  # Can't find two numbers if there's less than 2 elements
+
+    # Initialize the two largest and two smallest numbers
+    max1 = max2 = float('-inf')
+    min1 = min2 = float('inf')
+
+    for num in arr:
+        # Update the two largest numbers
+        if num > max1:
+            max2 = max1
+            max1 = num
+        elif num > max2:
+            max2 = num
+
+        # Update the two smallest numbers
+        if num < min1:
+            min2 = min1
+            min1 = num
+        elif num < min2:
+            min2 = num
+
+    # Return the maximum product of two numbers
+    return max(max1 * max2, min1 * min2)
+
+# Example usage
+arr = [1, 20, 3, 10, -10]
+print(max_product(arr))  # Output: 200

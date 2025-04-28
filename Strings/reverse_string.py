@@ -17,3 +17,7 @@ def reverse_string(s):
 # Example usage
 s = 'hello'
 print(reverse_string(s))  #
+"""✅ Time Complexity = O(n)
+✅ Space Complexity = O(n) (because you made a list copy)
+
+"""
